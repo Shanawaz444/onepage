@@ -1,0 +1,37 @@
+<section class="languagesihaveworked">
+    <div class="section-title">
+        <span class="sub-title">
+            From The Past
+        </span>
+        <h2>
+            Languages I Have Worked
+        </h2>
+    </div>
+    <div class="row" (scroll)="scrolling($event)" [ngClass]="{'languagerowopacity':scroll,'changeopacity':opacity_decision}" >
+        <div class="col">
+            <div class="sec-row">
+                <div class="languagettile">
+                    <h2>
+                     {{language_name}}
+                    </h2>
+                    <p>
+                        {{developed_by}}
+                    </p>
+                    <p class="innerparagraph">
+                        {{languagediscrept1}}<br>{{languagediscrept2}}<br>{{languagediscrept3}}<br>{{languagediscrept4}}
+                    </p>
+                    <div class="languagettilelogo">
+                        <img src="assets/images/{{languagecologo}}" id="lantitlelogo" [ngStyle]="{'width':middlelogoswidth}">
+                    </div>
+                    
+                </div>
+                <div class="languagetitlebottomimg" [ngStyle]="{'transition':'2.0s'}" [ngClass]="{'languagetitlebottomimg1':bottomlangimg1,'languagetitlebottomimg2':bottomlangimg2}">
+                    <img src="assets/images/{{bottomlogos}}" id="langbottomimg" [ngStyle]="{'width':bottomlogoswidth}">
+                </div>
+            </div>
+            <div class="languageimage" [ngStyle]="{'clip-path':polygonchange}">
+                <img src="assets/images/{{image_logo}}.png" id="imagelang">
+            </div>
+        </div>
+    </div>
+</section>

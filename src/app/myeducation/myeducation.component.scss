@@ -1,0 +1,64 @@
+.myeduction-area{
+    width: auto;
+    height: auto;
+    background-color: rgb(249, 180, 25);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 815px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(249, 180, 25);
+}
+.section-title .sub-title {
+    display: block;
+    text-transform: uppercase;
+    background: linear-gradient(to left bottom,#ee0979,#fc1c62,#ff364a,#ff512f,#ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    font-family: Poppins,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.section-title h2 {
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    font-family: Poppins,sans-serif;
+
+}
+
+.container-edumain
+{
+background-image: url(src/assets/images/educationnewbg.jpg);
+}
+.container-edumain .row-edurow .col-educol1
+{
+    @media (max-width:516px)
+    {
+        margin-left: 0px;
+    }
+    margin-left: 100px;
+    margin-right: auto;
+}
+.container-edumain .row-edurow
+{
+    @media (max-width:516px)
+    {
+        display: block;
+    }
+    display: flex;
+}
+.container-edumain .row-edurow .col-educol2
+{
+    margin-right: 50px;
+}
+.container-edumain .row-edurow .col-educol1 .container-col2_img
+{
+  
+}
