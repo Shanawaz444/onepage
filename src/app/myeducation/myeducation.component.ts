@@ -20,7 +20,14 @@ export class MyeducationComponent implements OnInit {
 }
   chaing_width()
   {
-     this.totalwidth=innerWidth/2;
+    if(this.innerwidth>517)
+     {
+       this.totalwidth=innerWidth/2;
+     }
+     else{
+       this.totalwidth=innerWidth/1.1;
+     }
+     
      this.headder_padding_left=innerWidth/80;
   }
   ngOnInit(): void {
