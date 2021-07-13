@@ -19,6 +19,7 @@ import { BannerComponent } from './banner/banner.component';
 import { LanguagesihaveworkedComponent } from './languagesihaveworked/languagesihaveworked.component';
 import { MyeducationComponent } from './myeducation/myeducation.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutEducationComponent } from './about-education/about-education.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProjectsComponent } from './projects/projects.component';
     LanguagesihaveworkedComponent,
     MyeducationComponent,
     ProjectsComponent,
+    AboutEducationComponent,
   ],
   imports: [
     IgxBannerModule,
