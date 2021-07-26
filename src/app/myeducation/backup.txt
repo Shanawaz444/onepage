@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-4 col-md-12">
+        <div class="single-myeducation-post">
+           
+                <img src="assets/images/eductionschool.jpg" alt="image">
+            
+            <div class="post-content">
+                <ul>
+                    <h2>
+                        My School Life
+                    </h2>
+                    <p>
+                      Belive it or not i have changed three schools,
+                      1.from nursery to 1st class in Sri Viveykananda EM School(KasimKota,Andhra Pradesh).
+                      2.from 2nd to 7th class in Stella Maries EM School(Vizag,Andhra Pradesh).
+                      3. from 7th to 10th class in Ravindra Bharathi Olampyed School(Vizag,NAD Andhra Predesh).
+                    </p>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    
+        <div id="col2" class="post-col-lg-4 post-col-md-12">
+            <div class="single-myeducation-post">
+                
+                <div class="post1-content">
+                    <ul id="fstul"style="padding: 5px;">
+                        <h2>
+                            My High School Life
+                        </h2>
+                            <p>
+                               I have compleated my High-School in Sri Chatinya Junior Collage.Andhra Pradesh,Vizag,NAD.
+                              </p>
+                       
+                        
+                    </ul>
+                </div>
+                
+                    <img id="img2" src="assets/images/collage.jpg" alt="image">
+                
+
+            </div>
+        </div>
+   
+    <div class="col-lg-4 col-md-12">
+        <div class="single-myeducation-post">
+           
+                <img src="assets/images/university.jpg" alt="image">
+          
+            <div class="post2-content">
+                <ul>
+                    <h2>
+                        My Collage Life
+                    </h2>
+                    <p>
+                      Iam now compleating my Btech in Vignan Instute Of Information and Techonology.
+                      Vishakaptnam,Andhra Pradesh,Duvvada.
+                      In Department of Computer Science of Engeneering. 
+                    </p>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

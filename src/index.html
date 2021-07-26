@@ -6,8 +6,130 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 </head>
 <body>
+  <canvas></canvas>
   <app-root></app-root>
+  <script>
+    //global variables
+    const palette = ['#011627', '#FF3366', '#2EC4B6', '#20A4F3', '#F6F7F8'];
+ 
+ const canvas = document.querySelector('canvas');
+ const ctx = canvas.getContext('2d');
+ 
+ let character = '\\';
+ 
+ function resize() {
+   canvas.width = window.innerWidth/0.5;
+   canvas.height = window.innerHeight/0.5;
+   if(window.innerWidth<=1067)
+   {
+     colony.position[0] = canvas.width /2;
+   colony.position[1] = canvas.height /3;
+   }else{
+     colony.position[0] = canvas.width / 4;
+   colony.position[1] = canvas.height / 2;
+   }
+   
+   
+   colony.bound = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+   colony.bound /= 2;
+ }
+ 
+ function random(min = 0, max) {
+   return Math.floor(Math.random() * (max - min + 1) + min);
+ }
+ 
+ function distance(pos1, pos2) {
+   return Math.sqrt( Math.pow((pos1[0]-pos2[0]), 2) + Math.pow((pos1[1]-pos2[1]), 2));
+ }
+ 
+ function createCell(position, fever) {
+   return {
+     position,
+     fever,
+     fontSize: 30,
+     targetFontSize: 30,
+     color: 0
+   }
+ }
+ 
+ const MAX_CELLS = 100;
+ var colony = {
+   position: [canvas.width / 2, canvas.height / 2],
+   bound: window.innerHeight / 3,
+   cells: []
+ };
+ function generateWorld() {
+   for(let i = 0; i < MAX_CELLS; i++) {
+     const cell = createCell([colony.position[0] + random(-100, 100), colony.position[1] + random(-100, 100)], character);
+     cell.target = [...cell.position];
+     colony.cells.push(cell);
+   }
+ }
+ 
+ 
+ function draw() {
+   ctx.clearRect(0, 0, canvas.width, canvas.height);
+   for(let cell of colony.cells) {
+     ctx.font = `${cell.fontSize}px Arial`;
+     ctx.fillStyle = cell.color;
+     ctx.fillText(cell.fever, cell.position[0], cell.position[1]);
+   }
+ }
+ 
+ function update() {
+   for(let cell of colony.cells) {
+     if(distance(cell.position, cell.target) < 1) {
+       setTarget(cell, colony);
+     }
+     cell.position[0] += (cell.target[0] - cell.position[0]) *  0.05;
+     cell.position[1] += (cell.target[1] - cell.position[1]) *  0.05;
+     cell.fontSize += (cell.targetFontSize - cell.fontSize) *  0.05;
+   }
+ }
+ 
+ function setTarget(cell, colony) {
+   cell.target[0] = colony.position[0] + random(-colony.bound, colony.bound);
+   cell.target[1] = colony.position[1] + random(-colony.bound, colony.bound);
+   const targetSeed = random(0, 4);
+   cell.fontSize = cell.targetFontSize;
+   cell.targetFontSize = 10 + 10 * targetSeed * targetSeed;
+   cell.color = palette[random(0, 4)];
+   cell.fever = character;
+ }
+ 
+ document.addEventListener('keypress', event => {
+   character = String.fromCharCode(event.which);
+ });
+ 
+ window.addEventListener('resize', () => resize());
+ 
+ function loop() {
+   requestAnimationFrame(loop);
+ 
+   update();
+   draw();
+ }
+ 
+ resize();
+ generateWorld();
+ loop();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //////////////////////////////////////////////////////////////////////////////////////////
+ 
+ 
+ 
+     </script>
 </body>
 </html>
