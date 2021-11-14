@@ -8,7 +8,7 @@
 .languagesihaveworked .languagerowopacity
 {
     opacity: 1;
-    transition: 1.0s;
+    transition: .5s;
     animation: ease-in-out;
 }
 .languagesihaveworked .col{
@@ -185,7 +185,7 @@ transition: .5s;
         transform: translatex(0%);
     }
     animation: ease-in-out;
-    transition: 2.0s;
+    transition: .5s;
     
 }
 .languagesihaveworked .changeopacity
