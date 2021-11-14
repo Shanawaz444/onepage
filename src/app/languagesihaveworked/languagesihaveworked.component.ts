@@ -144,7 +144,7 @@ scrt=0;
     this.bottomlangimg1=true
     this.bottomlangimg2=false
     }
-  },1000)
+  },500)
 }
 
 scrolling=(s:any)=>{
