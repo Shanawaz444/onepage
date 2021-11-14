@@ -1,29 +1,28 @@
 <nav class="navbar navbar-default" (scroll)="scrolling($event)" [ngClass]="{'level-trans':scroll,'level-transs':click}">
    <div class="container-fluid" >
-    <div class="combain-container-fluid">
-        <a class="navbar-brand">
-            Know Me
-        </a>
-            <button type="button" (click)="onClickMe($event)">
-                <div class="burgerbutton">
-                    
-                    <span class="top-bar"></span>
-                    <span class="middle-bar"></span>
-                    <span class="bottom-bar"></span>
-                    
-                </div>
-            </button>
-     
-    </div>
+        <div class="combain-container-fluid">
+            <a class="navbar-brand" href="#knowme">
+                Know Me
+            </a>
+                <button type="button" (click)="onClickMe($event)">
+                    <div class="burgerbutton">
+                        
+                        <span class="top-bar"></span>
+                        <span class="middle-bar"></span>
+                        <span class="bottom-bar"></span>
+                        
+                    </div>
+                </button>
+        
+        </div>
     
         <ul class="navbar-nav"[ngClass]="{'navbar-nav-droped':click}">
-            <li  class="nav-item"><a href="#" class="nav-link active">About</a></li>
-            <li  class="nav-item"><a href="#" class="nav-link">MyEducation</a></li>
-            <li  class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+            <li  class="nav-item"><a href="#about" class="nav-link active" >About</a></li>
+            <li  class="nav-item"><a href="#myeducation" class="nav-link">MyEducation</a></li>
+            <li  class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         </ul>
     
     
-    
-   </div>
+    </div>
 
 </nav>
