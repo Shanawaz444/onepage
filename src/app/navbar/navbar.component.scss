@@ -22,11 +22,13 @@
     
     margin-left: auto;
     margin-bottom: 20px;
+    display:flex;
    
 }
 }
 @media (min-width:887px)
-{.combain-container-fluid  button{
+{
+    .combain-container-fluid  button{
     display: none;
    
 }
@@ -40,7 +42,7 @@ transition: all 1000s ease-in-out;
         
     }
     margin-left: auto;
-    margin-top: 0px;
+    margin-top: 10px;
     flex-direction: row;
     display: flex;
 }
@@ -49,7 +51,7 @@ transition: all 1000s ease-in-out;
     padding-left: 60px;
     padding-right: 60px;
     margin-top: 0px;
-    flex-direction: column;
+    flex-direction: row;
     display: flex;
 }
 .combain-container-fluid{
