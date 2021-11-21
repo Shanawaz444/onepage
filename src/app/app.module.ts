@@ -10,6 +10,7 @@ import { LanguagesihaveworkedComponent } from './languagesihaveworked/languagesi
 import { MyeducationComponent } from './myeducation/myeducation.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutEducationComponent } from './about-education/about-education.component';
+import { NavbarV2Component } from './navbar-v2/navbar-v2.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AboutEducationComponent } from './about-education/about-education.compo
     MyeducationComponent,
     ProjectsComponent,
     AboutEducationComponent,
+    NavbarV2Component,
   ],
   imports: [
     BrowserModule,
