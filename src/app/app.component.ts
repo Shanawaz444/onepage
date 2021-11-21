@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'KnowMe';
+  ngOnInit(): void {
+    alert("build in process upgrading this application from angular 9 to angular 12 !")
+  }
 }
