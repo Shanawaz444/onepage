@@ -1,0 +1,45 @@
+<nav class="navbar" (scroll)="scrolling($event)" >
+    <div class="navbar-inner" [ngClass]="{'offset_reached':scroll}">
+        <h1 class="navbar-brand">
+            <a href="#knowme" class="navbar-link">Know Me</a>
+            
+        </h1>
+
+        <div class="navbar-options">
+            <a href="#about" class="navbar-link">
+                <span>About</span>
+            </a>
+            <a href="#about" class="navbar-link">
+                <span>MyEducation</span>
+            </a>
+            <a href="#projects" class="navbar-link">
+                <span>Projects</span>
+            </a>
+        </div>
+
+        <!--button from here???????????-->
+
+        <button class="custom-button " (click)="triggerHiddenList()">
+            <div class="upperLine custom-button-commonProperties"></div>
+            <div class="middleLine custom-button-commonProperties"></div>
+            <div class="bottomLine custom-button-commonProperties"></div>
+        </button>
+
+
+    </div>
+
+    <div class="hidden-list-outer" [ngClass]="{'hidden-list':hiddenList}">
+        <div class="hidden-list-inner">
+            <a href="#about" class="navbar-link">
+                <span>About</span>
+            </a>
+            <a href="#about" class="navbar-link">
+                <span>MyEducation</span>
+            </a>
+            <a href="#projects" class="navbar-link">
+                <span>Projects</span>
+            </a>
+        </div>
+         
+    </div>
+</nav>

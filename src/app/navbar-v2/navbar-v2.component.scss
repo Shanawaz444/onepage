@@ -1,0 +1,137 @@
+.navbar
+{
+    position:fixed;
+    width:100%;
+    transition: .3s ease-in-out;
+    z-index: 2;
+    display:flex;
+    flex-direction:column;
+}
+
+.navbar-inner{
+    display:flex;
+    
+}
+
+.navbar-brand
+{
+    color: #fff;
+    margin-left: 30px;
+   
+}
+.navbar-options{
+  
+    margin-top:25px;
+    margin-left: auto;
+    padding-right: 20px;
+   
+}
+
+.navbar-link{
+    color: #fff;
+    transition: .3s ease-in-out;
+    padding:5px;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 20px;
+    
+  
+}
+.navbar-link:hover{
+    color:red;
+    transition: .3s ease-in-out;
+ 
+}
+.offset_reached{
+    background-color: black;
+    transition: .3s ease-in-out;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.custom-button{
+    display:none;
+    width:55px;
+    height: 40px;
+    margin-top:13px;
+    margin-right: 20px;
+    margin-left: auto;
+    background-color: transparent;
+    border-style: none;
+}
+.custom-button-commonProperties
+{
+    
+    margin-bottom: 6px;
+    height: 3px;
+    width:40px;
+    background-color:white;
+    transition: .3s ease-in-out;
+    border-radius: 2px;
+}
+.custom-button:hover
+{
+    .custom-button-commonProperties
+    {
+    transition: .3s ease-in-out;
+    background-color:red;
+    }
+    .upperLine{
+        transform: rotateZ(50deg) translateY(6px) translateX(7px);
+    }
+    .bottomLine{
+ 
+        transform: rotateZ(-50deg) translateY(-6px) translateX(7px);
+    }
+    .middleLine{
+        background-color:transparent;
+        transition: .0s ease-in-out;
+
+    }
+}
+
+.upperLine{
+  
+    
+}
+.middleLine{
+    
+    transition: .0s ease-in-out;
+}
+.bottomLine{
+ 
+   
+}
+
+
+.hidden-list-outer{
+    display: none;
+    transition: .3s ease-in-out;
+}
+.hidden-list{
+
+    display: block;
+    margin-top: 20px;
+    background-color:black;
+    display: flex;
+    margin-left:20px;
+    margin-right:20px;
+    transition: .3s ease-in-out;
+    height:auto;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.hidden-list-inner{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+}
+@media (max-width: 475px)
+{
+    .navbar-options
+    {
+        display:none;
+    }
+    .custom-button{
+        display:block;
+    }
+}
