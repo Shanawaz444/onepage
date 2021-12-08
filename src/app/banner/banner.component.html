@@ -17,7 +17,10 @@
                 Fullstack Development taught me to think creatively <BR> Competitive Programming taught me to think optimally and be patient<BR>ESports taught me to never go back on my words, belive in my self and never give up !
                 <BR>IF YOU DONT LIKE THE HAND THAT FATE'S DEALT YOU WITH, FIGHT FOR THE NEW ONE, THATS MY MOTO !
               </P>
-              <div class="contacticons">
+              <!--
+
+
+<div class="contacticons">
                 <div class="github">
                   
                   <a href="https://github.com/Shanawaz444"><img class="icon-prop" src="assets/images/github.png" alt=""> </a>
@@ -43,6 +46,19 @@
                 </div>
                 
               </div>
+
+
+              -->
+
+
+
+              <div class="contacticons" >
+                <div *ngFor="let data of contacticons; let i = index" class="{{data.className}}">
+                  
+                  <a href="{{data.href}}"><img class="icon-prop" src={{data.src}} alt=""> </a>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
